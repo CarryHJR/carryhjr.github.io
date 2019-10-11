@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content>
+    <meta name="keyword" content>
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>
+        
+          macos 使用小记 - undefined
+        
+    </title>
+
+    <link rel="canonical" href="carryhjr.github.io/2018/05/27/others-mac-config/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/hux-blog.min.css">
+
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="/css/highlight.css">
+
+    <!-- Custom Fonts -->
+    <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+    <!-- Hux change font-awesome CDN to qiniu -->
+    <link href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+    <!-- Hux Delete, sad but pending in China
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/
+    css'>
+    -->
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="">
+
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">CarryHJR&#39;s Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+
+                    
+
+                        
+                        <li>
+                            <a href="/archives/">Archives</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/tags/">Tags</a>
+                        </li>
+                        
+                    
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+    <!-- Main Content -->
+    
+<!-- Image to hack wechat -->
+<!-- <img src="carryhjr.github.io/img/icon_wechat.png" width="0" height="0"> -->
+<!-- <img src="{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}" width="0" height="0"> -->
+
+<!-- Post Header -->
+<style type="text/css">
+    header.intro-header{
+        background-image: url('/img/bg_2.jpg')
+    }
+</style>
+<header class="intro-header" >
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                          <a class="tag" href="/tags/#publish" title="publish">publish</a>
+                        
+                    </div>
+                    <h1>macos 使用小记</h1>
+                    <h2 class="subheading"></h2>
+                    <span class="meta">
+                        Posted by Hu Jiarui on
+                        2018-05-27
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+    <!-- Post Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                <h2 id="README"><a href="#README" class="headerlink" title="README"></a>README</h2><p><img src="https://i.imgur.com/s4ivy6J.png" alt></p>
+<a id="more"></a>
+
+<h2 id="iwork"><a href="#iwork" class="headerlink" title="iwork"></a>iwork</h2><p>Pages:可根据模板快速制作履历、报告等<br>Keynote:简报<br>Number:如财务计划</p>
+<h2 id="必装软件"><a href="#必装软件" class="headerlink" title="必装软件"></a>必装软件</h2><ol>
+<li>shadowsocksX-NG<br><a href="https://github.com/shadowsocks/ShadowsocksX-NG/releases" target="_blank" rel="noopener">https://github.com/shadowsocks/ShadowsocksX-NG/releases</a><br>这个客户端厉害大发了，提供了http代理端口，我手动改为了8123，就不需要poliop了</li>
+</ol>
+<p>推荐用sslocal，遇到error可以refer <a href="https://blog.lyz810.com/article/2016/09/shadowsocks-with-openssl-greater-than-110/" target="_blank" rel="noopener">https://blog.lyz810.com/article/2016/09/shadowsocks-with-openssl-greater-than-110/</a></p>
+<ol start="2">
+<li><p>chrome<br><a href="https://www.google.com/chrome/" target="_blank" rel="noopener">https://www.google.com/chrome/</a></p>
+</li>
+<li><p>vscode<br><a href="https://code.visualstudio.com/download" target="_blank" rel="noopener">https://code.visualstudio.com/download</a></p>
+</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cat &lt;&lt; EOF &gt;&gt; ~/.bash_profile</span><br><span class="line"># Add Visual Studio Code (code)</span><br><span class="line">export PATH=&quot;\$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin&quot;</span><br><span class="line">EOF</span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li><p>iterm2<br><a href="https://www.iterm2.com/downloads.html" target="_blank" rel="noopener">https://www.iterm2.com/downloads.html</a></p>
+</li>
+<li><p>qq<br><a href="https://im.qq.com/macqq/" target="_blank" rel="noopener">https://im.qq.com/macqq/</a></p>
+</li>
+<li><p>wechat<br><a href="https://weixin.qq.com/" target="_blank" rel="noopener">https://weixin.qq.com/</a></p>
+<p>显示和隐藏shortcut(highly recommend): shift+cmd+w</p>
+</li>
+<li><p>搜狗输入法<br><a href="https://pinyin.sogou.com/mac/" target="_blank" rel="noopener">https://pinyin.sogou.com/mac/</a></p>
+</li>
+<li><p>网易云音乐<br><a href="https://music.163.com/#/download" target="_blank" rel="noopener">https://music.163.com/#/download</a></p>
+</li>
+<li><p>iPic<br>app store</p>
+</li>
+<li><p>aria2gui and BaiduExporter<br><a href="https://github.com/yangshun1029/aria2gui/releases" target="_blank" rel="noopener">https://github.com/yangshun1029/aria2gui/releases</a><br><a href="https://github.com/acgotaku/BaiduExporter/blob/master/BaiduExporter.crx" target="_blank" rel="noopener">https://github.com/acgotaku/BaiduExporter/blob/master/BaiduExporter.crx</a></p>
+</li>
+<li><p>moom<br><a href="https://xclient.info/s/moom.html" target="_blank" rel="noopener">https://xclient.info/s/moom.html</a></p>
+</li>
+<li><p>pycharm professional<br><a href="https://www.jetbrains.com/pycharm/download/" target="_blank" rel="noopener">https://www.jetbrains.com/pycharm/download/</a></p>
+</li>
+<li><p>zotero<br><a href="https://www.zotero.org/download/" target="_blank" rel="noopener">https://www.zotero.org/download/</a></p>
+</li>
+<li><p>pdf expert<br><a href="https://pdfexpert.com/downloads" target="_blank" rel="noopener">https://pdfexpert.com/downloads</a></p>
+</li>
+<li><p>wps<br><a href="http://www.wps.cn/product/wpsmac/" target="_blank" rel="noopener">http://www.wps.cn/product/wpsmac/</a></p>
+</li>
+<li><p>alfred3<br><a href="https://xclient.info/s/alfred.html#versions" target="_blank" rel="noopener">https://xclient.info/s/alfred.html#versions</a></p>
+<p>在web search里增加<a href="http://www.91dict.com/words?w={query}" target="_blank" rel="noopener">http://www.91dict.com/words?w={query}</a></p>
+</li>
+</ol>
+<p>启动无效的话是因为没有签名</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">xcode-select --install</span><br><span class="line">codesign --sign - --force --deep /Applications/Alfred\ 3.app</span><br><span class="line">codesign --sign - --force --deep /Applications/Alfred\ 3.app/Contents/Preferences/Alfred\ Preferences.app</span><br></pre></td></tr></table></figure>
+
+<ol start="20">
+<li>Karabiner<br><a href="https://pqrs.org/osx/karabiner/" target="_blank" rel="noopener">https://pqrs.org/osx/karabiner/</a></li>
+</ol>
+<ol start="22">
+<li>brew<br><a href="https://brew.sh/" target="_blank" rel="noopener">https://brew.sh/</a></li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">brew install polipo</span><br><span class="line">brew services start polipo</span><br></pre></td></tr></table></figure>
+
+<ol start="23">
+<li><p>wget</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install wget</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>zsh<br>chsh -s /usr/local/bin/zsh</p>
+</li>
+</ol>
+<p><a href="https://github.com/robbyrussell/oh-my-zsh" target="_blank" rel="noopener">https://github.com/robbyrussell/oh-my-zsh</a></p>
+<ol start="25">
+<li><p>miniconda<br><a href="https://conda.io/miniconda.html" target="_blank" rel="noopener">https://conda.io/miniconda.html</a></p>
+</li>
+<li><p>sublime<br><a href="https://www.sublimetext.com/" target="_blank" rel="noopener">https://www.sublimetext.com/</a></p>
+</li>
+<li><p>jietu<br>apple store</p>
+</li>
+<li><p>xquartz<br><a href="https://www.xquartz.org/" target="_blank" rel="noopener">https://www.xquartz.org/</a></p>
+</li>
+<li><p>vlc<br><a href="https://www.videolan.org/vlc/" target="_blank" rel="noopener">https://www.videolan.org/vlc/</a></p>
+</li>
+<li><p>java<br><a href="https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" target="_blank" rel="noopener">https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html</a></p>
+</li>
+</ol>
+<p>下载后直接安装，不需要配置</p>
+<ol start="33">
+<li>virtual box„<br><a href="https://www.virtualbox.org/wiki/Downloads" target="_blank" rel="noopener">https://www.virtualbox.org/wiki/Downloads</a><br>共享文件夹是必须的</li>
+</ol>
+<p>安装完会提示删除删除启动镜像 - 直接重启<br>启动后菜单栏有个device - 安装增强功能<br>在settings里设置共享文件夹和挂载位置<br>然后把用户 sudo usermod -aG vboxsf $(whoami)</p>
+<p>复制的话settings-advanced 和 在关机状态下 storage-sata-use host</p>
+<p>直接bridge 然后 ssh 上去<br>export http_proxy=”127.0.0.1:8123”<br>export https_proxy=”127.0.0.1:8123”<br>first :<br>用bridge如果是校园网的话需要认证,改用<br>nat - advanced -  host ip 不填 端口 2222 | guest ip 不填 端口 22<br>ssh -p 2222 <a href="mailto:carry@127.0.0.1" target="_blank" rel="noopener">carry@127.0.0.1</a></p>
+<p>second: 改apt source | 后发现不用换<br><a href="https://carryhjr.github.io/2018/02/17/ubuntu-set-apt-source/">refer</a><br>千万不要upgrade 不然系统版本就变了</p>
+<p>second: set shared folder<br><a href="https://gist.github.com/estorgio/1d679f962e8209f8a9232f7593683265" target="_blank" rel="noopener">refer</a></p>
+<p>sudo mount -t vboxsf ubuntu-share ~/ubuntu-share</p>
+<p> sudo usermod -aG vboxsf carry</p>
+<p>third: update kernel to 4.18.2<br><a href="https://bbs.huaweicloud.com/forum/thread-22441-1-1.html" target="_blank" rel="noopener">https://bbs.huaweicloud.com/forum/thread-22441-1-1.html</a><br>中间有个sudo apt-get install -f  一定要执行<br><a href="http://launchpadlibrarian.net/375273308/libssl1.1_1.1.0g-2ubuntu4.1_amd64.deb" target="_blank" rel="noopener">http://launchpadlibrarian.net/375273308/libssl1.1_1.1.0g-2ubuntu4.1_amd64.deb</a></p>
+<p>uname -r 看内核<br>sudo lsb_release -a 看版本<br>删除旧内核 <a href="https://blog.csdn.net/u010658816/article/details/79366237" target="_blank" rel="noopener">https://blog.csdn.net/u010658816/article/details/79366237</a></p>
+<p>走代理<br>ssh -NR 8123:localhost:8123 -p 2222 <a href="mailto:carry@127.0.0.1" target="_blank" rel="noopener">carry@127.0.0.1</a> </p>
+<p>识别u盘 <a href="https://www.jianshu.com/p/1a40cce94fc9" target="_blank" rel="noopener">https://www.jianshu.com/p/1a40cce94fc9</a></p>
+<ol start="34">
+<li>node.js<br>brew install node</li>
+</ol>
+<p>临时使用淘宝源，以装hexo-cli为例</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli --registry=https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
+
+<ol start="35">
+<li><p>sshfs<br><a href="https://github.com/osxfuse/osxfuse/wiki/SSHFS" target="_blank" rel="noopener">https://github.com/osxfuse/osxfuse/wiki/SSHFS</a></p>
+</li>
+<li><p>matlab2018<br><a href="https://blog.csdn.net/Richard__Ting/article/details/81916856" target="_blank" rel="noopener">https://blog.csdn.net/Richard__Ting/article/details/81916856</a></p>
+</li>
+</ol>
+<ol start="37">
+<li>Proxifier<br><a href="http://www.proxifier.com/mac_download.htm" target="_blank" rel="noopener">http://www.proxifier.com/mac_download.htm</a><br>activate code: P427L-9Y552-5433E-8DSR3-58Z68</li>
+</ol>
+<p>定制规则的过程中先设置默认的是翻墙，然后在localhost把一些常用的网站加上</p>
+<ol start="38">
+<li>latex<br><a href="https://tug.org/mactex/" target="_blank" rel="noopener">https://tug.org/mactex/</a></li>
+</ol>
+<h3 id="duet"><a href="#duet" class="headerlink" title="duet"></a>duet</h3><p><a href="https://help.duetdisplay.com/updates/mac-release-notes" target="_blank" rel="noopener">https://help.duetdisplay.com/updates/mac-release-notes</a></p>
+<h2 id="常用快捷键"><a href="#常用快捷键" class="headerlink" title="常用快捷键"></a>常用快捷键</h2><p>command + w 关闭当前窗口<br>全选是option+a</p>
+<p>shift+command+. 显示隐藏文件</p>
+<p>mac山的mission control:触摸板四指向上或者control+up</p>
+<ol>
+<li>可以在mission control 里增加desktop</li>
+<li>显示当前desktop里的app，方便switch(app可以在menu里分配desktop)</li>
+</ol>
+<p>软件全屏时会自动分配一个新的desktop<br>cmd+i 查看属性<br>cmd+space spotlight<br>cmd+up 到顶部<br>cmd+down 到尾部<br>cmd+tab 切换app<br>cmd+delete 删除<br>cmd+shift+delete 清空回收站<br>cmd+~ 同一个app中切换窗格<br>cmd+w 关闭当前标签<br>space 预览</p>
+<h2 id="trouble-shooting"><a href="#trouble-shooting" class="headerlink" title="trouble shooting"></a>trouble shooting</h2><h3 id="matplotlib无法使用"><a href="#matplotlib无法使用" class="headerlink" title="matplotlib无法使用"></a>matplotlib无法使用</h3><p>RuntimeError: Python is not installed as a framework. The Mac OS X backend will not be able to function correctly if Python is not installed as a framework. See the Python documentation for more information on installing Python as a framework on Mac OS X. Please either reinstall Python as a framework, or try one of the other backends. If you are using (Ana)Conda please install python.app and replace the use of ‘python’ with ‘pythonw’. See ‘Working with Matplotlib on OSX’ in the Matplotlib FAQ for more information.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># open a terminal</span><br><span class="line">vim ~/.matplotlib/matplotlibrc   </span><br><span class="line"># input</span><br><span class="line">backend: TkAgg</span><br></pre></td></tr></table></figure>
+
+<h2 id="其他冷门需求"><a href="#其他冷门需求" class="headerlink" title="其他冷门需求"></a>其他冷门需求</h2><h3 id="读取ntfs"><a href="#读取ntfs" class="headerlink" title="读取ntfs"></a>读取ntfs</h3><p><a href="https://www.jianshu.com/p/bb412953bec3" target="_blank" rel="noopener">https://www.jianshu.com/p/bb412953bec3</a></p>
+<h3 id="管理不同应用程序之间的音量"><a href="#管理不同应用程序之间的音量" class="headerlink" title="管理不同应用程序之间的音量"></a>管理不同应用程序之间的音量</h3><p><a href="https://github.com/kyleneideck/BackgroundMusic/releases" target="_blank" rel="noopener">https://github.com/kyleneideck/BackgroundMusic/releases</a></p>
+<h3 id="快捷键移动鼠标"><a href="#快捷键移动鼠标" class="headerlink" title="快捷键移动鼠标"></a>快捷键移动鼠标</h3><p><a href="https://www.v2ex.com/t/187697m3" target="_blank" rel="noopener">https://www.v2ex.com/t/187697m3</a></p>
+<h3 id="control-the-mouse-using-python"><a href="#control-the-mouse-using-python" class="headerlink" title="control the mouse using python"></a>control the mouse using python</h3><p><a href="https://stackoverflow.com/questions/281133/how-to-control-the-mouse-in-mac-using-python" target="_blank" rel="noopener">https://stackoverflow.com/questions/281133/how-to-control-the-mouse-in-mac-using-python</a></p>
+<h3 id="切换dock位置"><a href="#切换dock位置" class="headerlink" title="切换dock位置"></a>切换dock位置</h3><p>在屏幕底部停顿几秒</p>
+<h3 id="网页保存为pdf"><a href="#网页保存为pdf" class="headerlink" title="网页保存为pdf"></a>网页保存为pdf</h3><p>用safari导出pdf就可以，效果非常好</p>
+<h3 id="read-ext4"><a href="#read-ext4" class="headerlink" title="read ext4"></a>read ext4</h3><p><a href="https://zhih.me/macos-mount-ntfs-ext/" target="_blank" rel="noopener">https://zhih.me/macos-mount-ntfs-ext/</a><br>不是很顺利<br>最后是</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">brew cask install osxfuse</span><br><span class="line">brew install ext4fuse</span><br><span class="line">sudo dscl . append /Groups/operator GroupMembership shieryue</span><br><span class="line">ext4fuse /dev/disk2s1 /Volumes/ubuntu</span><br></pre></td></tr></table></figure>
+
+<h3 id="查看磁盘"><a href="#查看磁盘" class="headerlink" title="查看磁盘"></a>查看磁盘</h3><p>diskutil list</p>
+<h3 id="装字典"><a href="#装字典" class="headerlink" title="装字典"></a>装字典</h3><p><a href="https://sspai.com/post/43155" target="_blank" rel="noopener">https://sspai.com/post/43155</a></p>
+<p>先在alfred里设置dictionary<br>然后在dictionary里设置词典</p>
+<h3 id="代码管理-dash"><a href="#代码管理-dash" class="headerlink" title="代码管理 dash"></a>代码管理 dash</h3><p><a href="https://weitimes.github.io/2017/12/14/%E6%95%88%E7%8E%87%E7%A5%9E%E5%99%A8%E4%B9%8BDash%20%E2%80%94%20%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5%E7%AE%A1%E7%90%86%E5%92%8CApi%E6%96%87%E6%A1%A3%E6%B5%8F%E8%A7%88/" target="_blank" rel="noopener">https://weitimes.github.io/2017/12/14/%E6%95%88%E7%8E%87%E7%A5%9E%E5%99%A8%E4%B9%8BDash%20%E2%80%94%20%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5%E7%AE%A1%E7%90%86%E5%92%8CApi%E6%96%87%E6%A1%A3%E6%B5%8F%E8%A7%88/</a></p>
+<p><a href="https://kapeli.com/dash_guide#disablingSnippets" target="_blank" rel="noopener">https://kapeli.com/dash_guide#disablingSnippets</a></p>
+<h3 id="Xquartz-ubuntu图形界面客户端"><a href="#Xquartz-ubuntu图形界面客户端" class="headerlink" title="Xquartz ubuntu图形界面客户端"></a>Xquartz ubuntu图形界面客户端</h3><p>需要在ubuntu server上<br>sudo apt-get install xorg<br>sudo apt-get install xauth</p>
+<h3 id="禁止adobe-creative-cloud开机启动"><a href="#禁止adobe-creative-cloud开机启动" class="headerlink" title="禁止adobe creative cloud开机启动"></a>禁止adobe creative cloud开机启动</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">launchctl unload -w /Library/LaunchAgents/com.adobe.AdobeCreativeCloud.plist</span><br></pre></td></tr></table></figure>
+
+<p><a href="https://zh-cn.ihowto.tips/osx-apps-download-tutorials-tips-hacks-news/disable-auto-launching-adobe-creative-cloud-login-macos.html" target="_blank" rel="noopener">https://zh-cn.ihowto.tips/osx-apps-download-tutorials-tips-hacks-news/disable-auto-launching-adobe-creative-cloud-login-macos.html</a></p>
+<h3 id="给ubuntu磁盘合并分区"><a href="#给ubuntu磁盘合并分区" class="headerlink" title="给ubuntu磁盘合并分区"></a>给ubuntu磁盘合并分区</h3><p>左上点击显示所有设备</p>
+<h3 id="diskutil-format"><a href="#diskutil-format" class="headerlink" title="diskutil format"></a>diskutil format</h3><p><a href="http://osxdaily.com/2016/08/30/erase-disk-command-line-mac/" target="_blank" rel="noopener">http://osxdaily.com/2016/08/30/erase-disk-command-line-mac/</a></p>
+<p>ubuntu读取时chown -R carry:carry是不行的，只能chown -R carry</p>
+<p>弄成exfat格式 可以参考<a href="http://www.ruanyifeng.com/blog/2018/10/exfat.html" target="_blank" rel="noopener">http://www.ruanyifeng.com/blog/2018/10/exfat.html</a></p>
+<h2 id="word-for-mac"><a href="#word-for-mac" class="headerlink" title="word for mac"></a>word for mac</h2><p>remove mac<br><a href="https://support.office.com/en-us/article/uninstall-office-for-mac-eefa1199-5b58-43af-8a3d-b73dc1a8cae3" target="_blank" rel="noopener">https://support.office.com/en-us/article/uninstall-office-for-mac-eefa1199-5b58-43af-8a3d-b73dc1a8cae3</a></p>
+<p>就直接装最新的mac2019然后下载插件</p>
+<h2 id="bind-F1-to-chrome"><a href="#bind-F1-to-chrome" class="headerlink" title="bind F1 to chrome"></a>bind F1 to chrome</h2>
+
+                <hr>
+
+                
+
+                <ul class="pager">
+                    
+                        <li class="previous">
+                            <a href="/2018/05/29/ubuntu-samba-share-directory/" data-toggle="tooltip" data-placement="top" title="share files in LAN using samba">&larr; Previous Post</a>
+                        </li>
+                    
+                    
+                        <li class="next">
+                            <a href="/2018/05/10/others-download-pdf-for-cnki/" data-toggle="tooltip" data-placement="top" title="下载cnki硕博士论文的pdf版">Next Post &rarr;</a>
+                        </li>
+                    
+                </ul>
+
+                
+
+                
+                <!-- disqus 评论框 start -->
+                <div class="comment">
+                    <div id="disqus_thread" class="disqus-thread"></div>
+                </div>
+                <!-- disqus 评论框 end -->
+                
+
+            </div>
+    <!-- Side Catalog Container -->
+        
+
+    <!-- Sidebar Container -->
+
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <!-- no hr -->
+                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+                       
+                          <a class="tag" href="/tags/#publish" title="publish">publish</a>
+                        
+                    </div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+            </div>
+
+        </div>
+    </div>
+</article>
+
+
+
+
+<!-- disqus 公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = "carryhjr";
+    var disqus_identifier = "carryhjr.github.io/2018/05/27/others-mac-config/";
+    var disqus_url = "carryhjr.github.io/2018/05/27/others-mac-config/";
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<!-- disqus 公共JS代码 end -->
+
+
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'always',
+          placement: 'right',
+          icon: '#'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+<style>
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+    }
+</style>
+
+
+
+    <!-- Footer -->
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                
+                
+                
+
+                
+
+                
+
+                
+
+                
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; CarryHJR&#39;s Blog 2019 
+                    <!--
+                    <br>
+                    Theme by <a href="http://huangxuan.me">Hux</a> 
+                    <span style="display: inline-block; margin: 0 5px;">
+                        <i class="fa fa-heart"></i>
+                    </span> 
+                    Ported by <a href="http://blog.kaijun.rocks">Kaijun</a> | 
+                    <iframe
+                        style="margin-left: 2px; margin-bottom:-5px;"
+                        frameborder="0" scrolling="0" width="91px" height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=kaijun&repo=hexo-theme-huxblog&type=star&count=true" >
+                    </iframe>
+                    -->
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/hux-blog.min.js"></script>
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- 
+     Because of the native support for backtick-style fenced code blocks 
+     right within the Markdown is landed in Github Pages, 
+     From V1.6, There is no need for Highlight.js, 
+     so Huxblog drops it officially.
+
+     - https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0  
+     - https://help.github.com/articles/creating-and-highlighting-code-blocks/    
+-->
+<!--
+    <script>
+        async("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function(){
+            hljs.initHighlightingOnLoad();
+        })
+    </script>
+    <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet">
+-->
+
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("carryhjr.github.io/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<!-- Google Analytics -->
+
+
+
+
+<!-- Baidu Tongji -->
+
+
+<!-- Side Catalog -->
+
+
+
+
+
+<!-- Image to hack wechat -->
+<img src="carryhjr.github.io/img/icon_wechat.png" width="0" height="0" />
+<!-- Migrate from head to bottom, no longer block render and still work -->
+
+</body>
+
+</html>
