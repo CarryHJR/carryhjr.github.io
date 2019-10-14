@@ -13,11 +13,11 @@
 
     <title>
         
-          read video using python - carryhjr | 武汉大学
+          carryhjr | 武汉大学
         
     </title>
 
-    <link rel="canonical" href="carryhjr.github.io/2018/07/25/py-read-video/">
+    <link rel="canonical" href="carryhjr.github.io/tags/publish/page/3/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -130,159 +130,7 @@
 
 
     <!-- Main Content -->
-    
-<!-- Image to hack wechat -->
-<!-- <img src="carryhjr.github.io/img/icon_wechat.png" width="0" height="0"> -->
-<!-- <img src="{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}" width="0" height="0"> -->
-
-<!-- Post Header -->
-<style type="text/css">
-    header.intro-header{
-        background-image: url('/img/bg_index.jpg')
-    }
-</style>
-<header class="intro-header" >
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="post-heading">
-                    <div class="tags">
-                        
-                          <a class="tag" href="/tags/#publish" title="publish">publish</a>
-                        
-                    </div>
-                    <h1>read video using python</h1>
-                    <h2 class="subheading"></h2>
-                    <span class="meta">
-                        Posted by Hu Jiarui on
-                        2018-07-25
-                    </span>
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
-
-<!-- Post Content -->
-<article>
-    <div class="container">
-        <div class="row">
-
-    <!-- Post Container -->
-            <div class="
-                col-lg-8 col-lg-offset-2
-                col-md-10 col-md-offset-1
-                post-container">
-
-                <h2 id="README"><a href="#README" class="headerlink" title="README"></a>README</h2><p>it’s a really suck thing, i dont know why cv2.VideoCapture doest work in my ubuntu16.04, so i use scikit-video to do that.</p>
-<a id="more"></a>
-<h2 id="references"><a href="#references" class="headerlink" title="references"></a>references</h2><p><a href="https://github.com/ContinuumIO/anaconda-issues/issues/121" target="_blank" rel="noopener">https://github.com/ContinuumIO/anaconda-issues/issues/121</a></p>
-<h2 id="note"><a href="#note" class="headerlink" title="note"></a>note</h2><ol>
-<li><p>install scikit-video</p>
-<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get <span class="keyword">install</span> libav-tools</span><br><span class="line">pip <span class="keyword">install</span> scikit-video</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>demo</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> skvideo.io</span><br><span class="line">cap = skvideo.io.VideoCapture(<span class="string">'test.mp4'</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span>(<span class="number">1</span>):</span><br><span class="line">    <span class="comment"># get a frame</span></span><br><span class="line">    ret, frame = cap.read()</span><br><span class="line">    <span class="comment"># show a frame</span></span><br><span class="line">    cv2.imshow(<span class="string">"capture"</span>, frame)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> cv2.waitKey(<span class="number">100</span>) &amp; <span class="number">0xFF</span> == ord(<span class="string">'q'</span>):</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line">cap.release()</span><br><span class="line">cv2.destroyAllWindows()</span><br></pre></td></tr></table></figure>
-
-</li>
-</ol>
-<p>bingo</p>
-
-
-                <hr>
-
-                
-
-                <ul class="pager">
-                    
-                        <li class="previous">
-                            <a href="/2018/07/25/py-resize-image/" data-toggle="tooltip" data-placement="top" title="resize image using python">&larr; Previous Post</a>
-                        </li>
-                    
-                    
-                        <li class="next">
-                            <a href="/2018/06/28/python-hexo/" data-toggle="tooltip" data-placement="top" title="scripts for hexo">Next Post &rarr;</a>
-                        </li>
-                    
-                </ul>
-
-                
-
-                
-
-            </div>
-    <!-- Side Catalog Container -->
-        
-
-    <!-- Sidebar Container -->
-
-            <div class="
-                col-lg-8 col-lg-offset-2
-                col-md-10 col-md-offset-1
-                sidebar-container">
-
-                <!-- Featured Tags -->
-                
-                <section>
-                    <!-- no hr -->
-                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
-                    <div class="tags">
-                       
-                          <a class="tag" href="/tags/#publish" title="publish">publish</a>
-                        
-                    </div>
-                </section>
-                
-
-                <!-- Friends Blog -->
-                
-            </div>
-
-        </div>
-    </div>
-</article>
-
-
-
-
-
-
-
-<!-- async load function -->
-<script>
-    function async(u, c) {
-      var d = document, t = 'script',
-          o = d.createElement(t),
-          s = d.getElementsByTagName(t)[0];
-      o.src = u;
-      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
-      s.parentNode.insertBefore(o, s);
-    }
-</script>
-<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
-<script>
-    async("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
-        anchors.options = {
-          visible: 'always',
-          placement: 'right',
-          icon: '#'
-        };
-        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
-    })
-</script>
-<style>
-    /* place left on bigger screen */
-    @media all and (min-width: 800px) {
-        .anchorjs-link{
-            position: absolute;
-            left: -0.75em;
-            font-size: 1.1em;
-            margin-top : -0.1em;
-        }
-    }
-</style>
-
-
+    <!-- Default Archive layout, we use archives instead. -->
 
     <!-- Footer -->
     <!-- Footer -->

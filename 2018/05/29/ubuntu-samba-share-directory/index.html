@@ -179,18 +179,18 @@
 <h2 id="references"><a href="#references" class="headerlink" title="references"></a>references</h2><p><a href="https://tutorials.ubuntu.com/tutorial/install-and-configure-samba#0" target="_blank" rel="noopener">official tutorial - recommend dramatically</a></p>
 <h2 id="note"><a href="#note" class="headerlink" title="note"></a>note</h2><ol>
 <li><p>install samba</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install samba</span><br></pre></td></tr></table></figure>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-<span class="builtin-name">get</span> install samba</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>edit configure file</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /etc/samba/smb.conf</span><br></pre></td></tr></table></figure>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo <span class="keyword">vim</span> /etc/samba/smb.<span class="keyword">conf</span></span><br></pre></td></tr></table></figure>
 
 </li>
 </ol>
 <p>At the bottom of the file, add the following lines:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[sambashare]</span><br><span class="line">    comment = Samba on Ubuntu</span><br><span class="line">    path = /where/you/wanna/share</span><br><span class="line">    read only = no</span><br><span class="line">    browsable = yes</span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[sambashare]</span><br><span class="line">    <span class="keyword">comment</span> = Samba <span class="keyword">on</span> Ubuntu</span><br><span class="line">    <span class="keyword">path</span> = /<span class="keyword">where</span>/you/wanna/<span class="keyword">share</span></span><br><span class="line">    <span class="keyword">read</span> <span class="keyword">only</span> = <span class="keyword">no</span></span><br><span class="line">    browsable = yes</span><br></pre></td></tr></table></figure>
 
 <ol start="3">
-<li>Setting up User Accounts and Connecting to Share<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo smbpasswd -a username</span><br></pre></td></tr></table></figure>
+<li>Setting up User Accounts and Connecting to Share<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo smbpasswd -<span class="selector-tag">a</span> username</span><br></pre></td></tr></table></figure>
 
 </li>
 </ol>

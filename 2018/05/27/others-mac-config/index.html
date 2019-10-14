@@ -188,7 +188,7 @@
 <li><p>vscode<br><a href="https://code.visualstudio.com/download" target="_blank" rel="noopener">https://code.visualstudio.com/download</a></p>
 </li>
 </ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cat &lt;&lt; EOF &gt;&gt; ~/.bash_profile</span><br><span class="line"># Add Visual Studio Code (code)</span><br><span class="line">export PATH=&quot;\$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin&quot;</span><br><span class="line">EOF</span><br></pre></td></tr></table></figure>
+<figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">cat</span> &lt;&lt; EOF &gt;&gt; ~/.<span class="keyword">bash_profile</span></span><br><span class="line"><span class="keyword"># </span><span class="keyword">Add </span>Visual Studio <span class="meta">Code</span> (<span class="meta">code</span>)</span><br><span class="line"><span class="symbol">export</span> PATH=<span class="string">"\$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"</span></span><br><span class="line"><span class="symbol">EOF</span></span><br></pre></td></tr></table></figure>
 
 <ol start="4">
 <li><p>iterm2<br><a href="https://www.iterm2.com/downloads.html" target="_blank" rel="noopener">https://www.iterm2.com/downloads.html</a></p>
@@ -221,7 +221,7 @@
 </li>
 </ol>
 <p>启动无效的话是因为没有签名</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">xcode-select --install</span><br><span class="line">codesign --sign - --force --deep /Applications/Alfred\ 3.app</span><br><span class="line">codesign --sign - --force --deep /Applications/Alfred\ 3.app/Contents/Preferences/Alfred\ Preferences.app</span><br></pre></td></tr></table></figure>
+<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">xcode-select <span class="params">--install</span></span><br><span class="line">codesign <span class="params">--sign</span> - <span class="params">--force</span> <span class="params">--deep</span> <span class="string">/Applications/Alfred</span>\ 3.app</span><br><span class="line">codesign <span class="params">--sign</span> - <span class="params">--force</span> <span class="params">--deep</span> <span class="string">/Applications/Alfred</span>\ 3.app/Contents/Preferences/Alfred\ Preferences.app</span><br></pre></td></tr></table></figure>
 
 <ol start="20">
 <li>Karabiner<br><a href="https://pqrs.org/osx/karabiner/" target="_blank" rel="noopener">https://pqrs.org/osx/karabiner/</a></li>
@@ -229,11 +229,11 @@
 <ol start="22">
 <li>brew<br><a href="https://brew.sh/" target="_blank" rel="noopener">https://brew.sh/</a></li>
 </ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">brew install polipo</span><br><span class="line">brew services start polipo</span><br></pre></td></tr></table></figure>
+<figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">brew </span><span class="keyword">install </span>polipo</span><br><span class="line"><span class="keyword">brew </span>services start polipo</span><br></pre></td></tr></table></figure>
 
 <ol start="23">
 <li><p>wget</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install wget</span><br></pre></td></tr></table></figure>
+<figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">brew </span><span class="keyword">install </span>wget</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>zsh<br>chsh -s /usr/local/bin/zsh</p>
 </li>
@@ -297,7 +297,7 @@
 </ol>
 <p>软件全屏时会自动分配一个新的desktop<br>cmd+i 查看属性<br>cmd+space spotlight<br>cmd+up 到顶部<br>cmd+down 到尾部<br>cmd+tab 切换app<br>cmd+delete 删除<br>cmd+shift+delete 清空回收站<br>cmd+~ 同一个app中切换窗格<br>cmd+w 关闭当前标签<br>space 预览</p>
 <h2 id="trouble-shooting"><a href="#trouble-shooting" class="headerlink" title="trouble shooting"></a>trouble shooting</h2><h3 id="matplotlib无法使用"><a href="#matplotlib无法使用" class="headerlink" title="matplotlib无法使用"></a>matplotlib无法使用</h3><p>RuntimeError: Python is not installed as a framework. The Mac OS X backend will not be able to function correctly if Python is not installed as a framework. See the Python documentation for more information on installing Python as a framework on Mac OS X. Please either reinstall Python as a framework, or try one of the other backends. If you are using (Ana)Conda please install python.app and replace the use of ‘python’ with ‘pythonw’. See ‘Working with Matplotlib on OSX’ in the Matplotlib FAQ for more information.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># open a terminal</span><br><span class="line">vim ~/.matplotlib/matplotlibrc   </span><br><span class="line"># input</span><br><span class="line">backend: TkAgg</span><br></pre></td></tr></table></figure>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># open a terminal</span></span><br><span class="line">vim ~<span class="regexp">/.matplotlib/m</span>atplotlibrc   </span><br><span class="line"><span class="comment"># input</span></span><br><span class="line">backend: TkAgg</span><br></pre></td></tr></table></figure>
 
 <h2 id="其他冷门需求"><a href="#其他冷门需求" class="headerlink" title="其他冷门需求"></a>其他冷门需求</h2><h3 id="读取ntfs"><a href="#读取ntfs" class="headerlink" title="读取ntfs"></a>读取ntfs</h3><p><a href="https://www.jianshu.com/p/bb412953bec3" target="_blank" rel="noopener">https://www.jianshu.com/p/bb412953bec3</a></p>
 <h3 id="管理不同应用程序之间的音量"><a href="#管理不同应用程序之间的音量" class="headerlink" title="管理不同应用程序之间的音量"></a>管理不同应用程序之间的音量</h3><p><a href="https://github.com/kyleneideck/BackgroundMusic/releases" target="_blank" rel="noopener">https://github.com/kyleneideck/BackgroundMusic/releases</a></p>
@@ -306,7 +306,7 @@
 <h3 id="切换dock位置"><a href="#切换dock位置" class="headerlink" title="切换dock位置"></a>切换dock位置</h3><p>在屏幕底部停顿几秒</p>
 <h3 id="网页保存为pdf"><a href="#网页保存为pdf" class="headerlink" title="网页保存为pdf"></a>网页保存为pdf</h3><p>用safari导出pdf就可以，效果非常好</p>
 <h3 id="read-ext4"><a href="#read-ext4" class="headerlink" title="read ext4"></a>read ext4</h3><p><a href="https://zhih.me/macos-mount-ntfs-ext/" target="_blank" rel="noopener">https://zhih.me/macos-mount-ntfs-ext/</a><br>不是很顺利<br>最后是</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">brew cask install osxfuse</span><br><span class="line">brew install ext4fuse</span><br><span class="line">sudo dscl . append /Groups/operator GroupMembership shieryue</span><br><span class="line">ext4fuse /dev/disk2s1 /Volumes/ubuntu</span><br></pre></td></tr></table></figure>
+<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">brew cask install osxfuse</span><br><span class="line">brew install ext4fuse</span><br><span class="line">sudo dscl . <span class="keyword">append</span> <span class="regexp">/Groups/</span>operator GroupMembership shieryue</span><br><span class="line">ext4fuse <span class="regexp">/dev/</span>disk2s1 <span class="regexp">/Volumes/u</span>buntu</span><br></pre></td></tr></table></figure>
 
 <h3 id="查看磁盘"><a href="#查看磁盘" class="headerlink" title="查看磁盘"></a>查看磁盘</h3><p>diskutil list</p>
 <h3 id="装字典"><a href="#装字典" class="headerlink" title="装字典"></a>装字典</h3><p><a href="https://sspai.com/post/43155" target="_blank" rel="noopener">https://sspai.com/post/43155</a></p>
@@ -314,7 +314,7 @@
 <h3 id="代码管理-dash"><a href="#代码管理-dash" class="headerlink" title="代码管理 dash"></a>代码管理 dash</h3><p><a href="https://weitimes.github.io/2017/12/14/%E6%95%88%E7%8E%87%E7%A5%9E%E5%99%A8%E4%B9%8BDash%20%E2%80%94%20%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5%E7%AE%A1%E7%90%86%E5%92%8CApi%E6%96%87%E6%A1%A3%E6%B5%8F%E8%A7%88/" target="_blank" rel="noopener">https://weitimes.github.io/2017/12/14/%E6%95%88%E7%8E%87%E7%A5%9E%E5%99%A8%E4%B9%8BDash%20%E2%80%94%20%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5%E7%AE%A1%E7%90%86%E5%92%8CApi%E6%96%87%E6%A1%A3%E6%B5%8F%E8%A7%88/</a></p>
 <p><a href="https://kapeli.com/dash_guide#disablingSnippets" target="_blank" rel="noopener">https://kapeli.com/dash_guide#disablingSnippets</a></p>
 <h3 id="Xquartz-ubuntu图形界面客户端"><a href="#Xquartz-ubuntu图形界面客户端" class="headerlink" title="Xquartz ubuntu图形界面客户端"></a>Xquartz ubuntu图形界面客户端</h3><p>需要在ubuntu server上<br>sudo apt-get install xorg<br>sudo apt-get install xauth</p>
-<h3 id="禁止adobe-creative-cloud开机启动"><a href="#禁止adobe-creative-cloud开机启动" class="headerlink" title="禁止adobe creative cloud开机启动"></a>禁止adobe creative cloud开机启动</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">launchctl unload -w /Library/LaunchAgents/com.adobe.AdobeCreativeCloud.plist</span><br></pre></td></tr></table></figure>
+<h3 id="禁止adobe-creative-cloud开机启动"><a href="#禁止adobe-creative-cloud开机启动" class="headerlink" title="禁止adobe creative cloud开机启动"></a>禁止adobe creative cloud开机启动</h3><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">launchctl unload -w /Library/LaunchAgents/com<span class="selector-class">.adobe</span><span class="selector-class">.AdobeCreativeCloud</span><span class="selector-class">.plist</span></span><br></pre></td></tr></table></figure>
 
 <p><a href="https://zh-cn.ihowto.tips/osx-apps-download-tutorials-tips-hacks-news/disable-auto-launching-adobe-creative-cloud-login-macos.html" target="_blank" rel="noopener">https://zh-cn.ihowto.tips/osx-apps-download-tutorials-tips-hacks-news/disable-auto-launching-adobe-creative-cloud-login-macos.html</a></p>
 <h3 id="给ubuntu磁盘合并分区"><a href="#给ubuntu磁盘合并分区" class="headerlink" title="给ubuntu磁盘合并分区"></a>给ubuntu磁盘合并分区</h3><p>左上点击显示所有设备</p>
