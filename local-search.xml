@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>A100 vs 3090 vs 2080ti just for mmdetection</title>
+    <link href="/2021/01/03/sp-mmdet-speed/"/>
+    <url>/2021/01/03/sp-mmdet-speed/</url>
+    
+    <content type="html"><![CDATA[<h1 id="README"><a href="#README" class="headerlink" title="README"></a>README</h1><p>以cascade r50 bs 2 为基准，比一下</p><a id="more"></a><h1 id="mmdet-speed"><a href="#mmdet-speed" class="headerlink" title="mmdet_speed"></a>mmdet_speed</h1><h2 id="3090-torch-1-7-cudnn-8-0-4-cuda-11-0"><a href="#3090-torch-1-7-cudnn-8-0-4-cuda-11-0" class="headerlink" title="3090 torch 1.7 cudnn 8.0.4 cuda 11.0"></a>3090 torch 1.7 cudnn 8.0.4 cuda 11.0</h2><table><thead><tr><th>spec</th><th>Time/iter</th></tr></thead><tbody><tr><td>no fp16  x16</td><td>0.26</td></tr><tr><td>no fp16 x8</td><td>0.27</td></tr><tr><td>fp16 x8</td><td>0.32</td></tr><tr><td></td><td></td></tr><tr><td></td><td></td></tr></tbody></table><h2 id="2080ti-torch-1-6-cudnn-7-6-3-cuda-10-1"><a href="#2080ti-torch-1-6-cudnn-7-6-3-cuda-10-1" class="headerlink" title="2080ti torch 1.6 cudnn 7.6.3 cuda 10.1"></a>2080ti torch 1.6 cudnn 7.6.3 cuda 10.1</h2><table><thead><tr><th>spec</th><th>Time</th></tr></thead><tbody><tr><td>no fp16 x16</td><td>0.31</td></tr><tr><td>Fp16</td><td>0.23</td></tr><tr><td></td><td></td></tr><tr><td></td><td></td></tr></tbody></table><h2 id="A100-torch-1-7-cuda-11-0"><a href="#A100-torch-1-7-cuda-11-0" class="headerlink" title="A100 torch 1.7 cuda 11.0"></a>A100 torch 1.7 cuda 11.0</h2><table><thead><tr><th>spec</th><th>Time</th></tr></thead><tbody><tr><td>no fp16 x16</td><td>0.22</td></tr><tr><td>Fp16</td><td>0.25</td></tr><tr><td></td><td></td></tr><tr><td></td><td></td></tr></tbody></table><p>118287 / 2600 / 4 * 2.5</p><h1 id="conclusion"><a href="#conclusion" class="headerlink" title="conclusion"></a>conclusion</h1><p>A100 0.22/iter 最快，但是2080ti+fp16 0.23/iter 也差不多，但是A100单价 65000，2080ti 9000, 3090 16000</p><p>感觉下一波还是得冲8卡2080ti, 如果经费很足的话冲8卡3090也勉强，毕竟24G显存可以跑x101-64d-dcn</p><p>2万5000 可以凑一个没有显卡的4卡机器 90000 组4卡3090 60000 组四卡2080ti</p><h1 id="trouble-shooting"><a href="#trouble-shooting" class="headerlink" title="trouble shooting"></a>trouble shooting</h1>]]></content>
+    
+    
+    <categories>
+      
+      <category>special</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>publish</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>林散之笔谈书法</title>
     <link href="/2020/12/28/sp-lisanzhi/"/>
     <url>/2020/12/28/sp-lisanzhi/</url>
